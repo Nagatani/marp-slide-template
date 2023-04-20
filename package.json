@@ -1,0 +1,23 @@
+{
+  "name": "marp-slide-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nagatani/marp-slide-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nagatani/marp-slide-template/issues"
+  },
+  "homepage": "https://github.com/Nagatani/marp-slide-template#readme",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^2.5.0"
+  }
+}
