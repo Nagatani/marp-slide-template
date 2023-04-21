@@ -1,0 +1,8 @@
+{
+  "markdown.marp.chromePath": "/usr/bin/google-chrome",
+  "markdown.marp.enableHtml": true,
+  "markdown.marp.themes": [
+      "./themes/base.css"
+  ],
+  "markdown.marp.outlineExtension": false
+}

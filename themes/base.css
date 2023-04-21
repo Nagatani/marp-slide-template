@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/*!
+ * @theme base
+ * @author Hidehiro Nagatani
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+
+@import "default";
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=BIZ+UDPGothic:wght@400;700&family=Roboto+Mono:wght@400;700&family=Source+Code+Pro&display=swap');
+:root {
+  --c-primary: #2292C4;
+  --c-secondary: #f8fbf8;
+  --c-accent: #DF6043;
+  --c-primary-sub: #104670;
+  --c-text: #1C2024;
+
+  --font-body: 'Roboto Mono', 'BIZ UDPGothic', sans-serif;
+  --font-code: 'Source Code Pro', 'BIZ UDGothic', monospace;
+
+  --c-separator: rgba(0,0,0,0.26);
+  font-size: 16pt;
+}
+
+section,
+section * {
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  
+  background-image: none;
+  background-color: var(--c-secondary);
+  
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 0;
+
+  font-family: var(--font-body);
+  color: var(--c-text);
+  line-height: 1.6;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+code {
+  font-family: var(--font-code);
+}
+
+
+section::after {
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+  font-size: 0.75rem;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .5rem 1.5rem;
+  background-color: var(--c-primary);
+  color: var(--c-secondary);
+  font-size: 1.25rem;
+}
+
+footer {
+  font-size: 0.5rem;
+}
+section em {
+  font-style: normal;
+  color: var(--c-primary-sub);
+}
+section strong {
+  font-style: normal;
+  font-weight: normal;
+  color: var(--c-accent);
+}
+section em strong {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--c-accent);
+}
+
+
+/* 表紙・セクションタイトル */
+section.title {
+  justify-content: center;
+}
+section.title[data-marpit-advanced-background-split="right"] figure {
+  background-position: right bottom !important;
+}
+section.title > h1 {
+  color: var(--c-primary-sub);
+  border-left: .75rem var(--c-accent) solid;
+  margin: 0;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  text-align: left;
+}
+section.title > h2,
+section.title > h3,
+section.title > h4,
+section.title > h5 {
+  color: var(--c-primary-sub);
+  margin: 1rem 0 .5rem;
+}
+section.title > footer {
+  display: none;
+}
+
+
+
+
+/* 注釈の代替で、blockquateを使用する */
+blockquote {
+  border: none;
+  background: none;
+  color: var(--c-text);
+  border-top: 1px solid var(--c-separator);
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0 3rem;
+  font-size: 0.5rem;
+  position: absolute;
+  bottom: 38px;
+  left: 0;
+}
+blockquote::before,
+blockquote::after {
+  content: "";  
+}
