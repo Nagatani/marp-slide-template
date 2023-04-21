@@ -78,6 +78,16 @@ $ java HelloWorld
 > 1. Create by Chat-GPT 3.5 [https://chat.openai.com/](https://chat.openai.com/)
 
 ---
+
+
+<!--
+_class: subtitle
+_paginate: false
+-->
+
+# セクションタイトル
+
+---
 <!-- _header: WSL2 UbuntuはChromeから入れる -->
 
 ## install google-chrome to WLS2 Ubuntu
