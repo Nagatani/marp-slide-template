@@ -6,7 +6,7 @@
 
 ## pdf sample
 
-![sample](my-presentation.md.pdf)
+[PDF sample](my-presentation.md.pdf)
 
 ## install 
 
