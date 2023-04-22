@@ -1,7 +1,7 @@
 ---
 marp: true
 paginate: true
-theme: base
+theme: lecture-slide
 footer: 大学名や講義名などを書く予定。著作権表示でも良いかも
 ---
 
