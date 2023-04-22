@@ -1,4 +1,6 @@
-# marp-slide-template
+# marp-theme-for-lecture
+
+講義資料のスライドを作成する際に、パワーポイント使いたくないので作った。
 
 ## slide markdown sample
 
