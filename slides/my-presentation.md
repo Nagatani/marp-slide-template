@@ -105,3 +105,155 @@ WSL2のUbuntu環境の場合は、Google ChromeかChromiumを入れろと言わ�
 $ CHROME_PATH=/usr/bin/google-chrome; npm run makepdf -file=my-presentation.md
 ```
 
+
+---
+
+# [Image syntax](https://marpit.marp.app/image-syntax)
+
+You can resize image size and apply filters through keywords: `width` (`w`), `height` (`h`), and filter CSS keywords.
+
+```markdown
+![width:100px height:100px](image.png)
+```
+![w:100px h:100px](images/bg-photo001.jpg)
+
+```markdown
+![blur sepia:50%](filters.png)
+```
+![w:100 h:100 blur sepia:50%](images/bg-photo001.jpg)
+
+
+Please refer [resizing image syntax](https://marpit.marp.app/image-syntax?id=resizing-image) and [a list of CSS filters](https://marpit.marp.app/image-syntax?id=image-filters).
+
+---
+
+# Background image
+
+You can set background image for a slide by using `bg` keyword.
+
+```markdown
+![bg opacity](images/bg-photo001.jpg)
+```
+
+![bg opacity](images/bg-photo001.jpg)
+
+---
+
+## Multiple backgrounds
+
+Marp can use multiple background images.
+
+```markdown
+![bg blur:3px](https://fakeimg.pl/800x600/fff/ccc/?text=A)
+![bg blur:3px](https://fakeimg.pl/800x600/eee/ccc/?text=B)
+![bg blur:3px](https://fakeimg.pl/800x600/ddd/ccc/?text=C)
+```
+
+![bg blur:3px](https://fakeimg.pl/800x600/fff/ccc/?text=A)
+![bg blur:3px](https://fakeimg.pl/800x600/eee/ccc/?text=B)
+![bg blur:3px](https://fakeimg.pl/800x600/ddd/ccc/?text=C)
+
+---
+
+## Multiple backgrounds(vertical)
+
+```markdown
+![bg vertical blur:3px](https://fakeimg.pl/800x600/fff/ccc/?text=A)
+![bg blur:3px](https://fakeimg.pl/800x600/eee/ccc/?text=B)
+![bg blur:3px](https://fakeimg.pl/800x600/ddd/ccc/?text=C)
+```
+
+![bg vertical blur:3px](https://fakeimg.pl/800x600/fff/ccc/?text=A)
+![bg blur:3px](https://fakeimg.pl/800x600/eee/ccc/?text=B)
+![bg blur:3px](https://fakeimg.pl/800x600/ddd/ccc/?text=C)
+
+---
+
+## background
+
+```markdown
+![bg right](image.jpg)
+```
+
+![bg right](images/bg-photo001.jpg)
+
+<!-- _footer: "*Photo by [Midjourney](https://midjourney.com/home/)*" -->
+
+---
+
+## Fragmented list
+
+Marp will parse a list with asterisk marker as the fragmented list for appearing contents one by one.
+
+```markdown
+# Fragmented list
+
+* One
+* Two
+* Three
+```
+
+# Fragmented list Sample
+* One
+* Two
+* Three
+
+---
+
+## Math typesetting
+
+[KaTeX](https://katex.org/) math typesetting such as $ax^2+bc+c$ can use with [Pandoc's math syntax](https://pandoc.org/MANUAL.html#math).
+
+$ax^2+bc+c$
+
+```tex
+$ax^2+bc+c$
+```
+
+$$I_{xx}=\int\int_Ry^2f(x,y)\cdot{}dydx$$
+
+```tex
+$$I_{xx}=\int\int_Ry^2f(x,y)\cdot{}dydx$$
+```
+
+---
+
+## Auto-scaling
+
+*Several built-in themes* are supported auto-scaling for code blocks and math typesettings.
+
+```text
+Too long code block will be scaled-down automatically. ------------>
+```
+```text
+Too long code block will be scaled-down automatically. ------------------------>
+```
+```text
+Too long code block will be scaled-down automatically. ------------------------------------------------>
+```
+```text
+Too long code block will be scaled-down automatically. ------------------------------------------------------------------------>
+```
+
+---
+
+## [Scoped style](https://marpit.marp.app/theme-css?id=scoped-style)
+
+If you want one-shot styling for current page, you can use `<style scoped>`.
+
+```markdown
+<style scoped>
+a {
+  color: green;
+}
+</style>
+
+- [Green link!](https://marp.app/)
+```
+
+<style scoped>
+a { color: green; }
+</style>
+
+- [Green link!](https://marp.app/)
+

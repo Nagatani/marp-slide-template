@@ -1,12 +1,12 @@
 # marp-slide-template
 
+## slide markdown sample
 
-> **Warning**
-> 未だメンテ中です。
+- [slides/my-presentation.md](slides/my-presentation.md)
 
 ## pdf sample
 
-[PDF sample](my-presentation.md.pdf)
+- [my-presentation.md.pdf](my-presentation.md.pdf)
 
 ## install 
 
@@ -16,22 +16,41 @@ $ npm ci
 
 ## usage
 
-slides直下に`my-presentation.md`を配置して、Marp用のMarkdownを書く
+slides直下に`new-slide.md`を配置したとして、Marp用のMarkdownを書く
+
+### start server
+
+HTMLでのスライドデザインの確認や、VS Codeのプレビューがうまく設定できなかったときなどは、下記コマンドでローカルサーバーを立ち上げる
 
 ```bash
-$ npm run makepdf -file=my-presentation.md
+$ npm run serve
 ```
 
-`dist/my-presentation.md.pdf`が生成される
+### generate html
+
+```bash
+$ npm run makehtml -file=new-slide.md
+```
+
+`dist/new-slide.md.html`が生成される
+
+### generate pdf
+
+```bash
+$ npm run makepdf -file=new-slide.md
+```
+
+`dist/new-slide.md.pdf`が生成される
+
+### run on WSL2 Ubuntu
 
 WSL2のUbuntu環境の場合は、Google ChromeかChromiumを入れろと言われるので、下記インストール手順でインストールし、`CHROME_PATH`を通してからスクリプトを利用する
 
 ```bash
-$ CHROME_PATH=/usr/bin/google-chrome; npm run makepdf -file=my-presentation.md
+$ CHROME_PATH=/usr/bin/google-chrome; npm run makepdf -file=new-slide.md
 ```
 
-
-## memo: install google-chrome to WLS2 Ubuntu
+#### install google-chrome to WLS2 Ubuntu
 
 ```bash
 $ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
