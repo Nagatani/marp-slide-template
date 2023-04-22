@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "npx marp -s ./slides --allow-local-files --html --theme-set ./themes",
     "makepdf": "npx marp slides/$npm_config_file -o dist/$npm_config_file.pdf --allow-local-files --html --theme-set ./themes",
-    "makehtml": "npx marp  slides/$npm_config_file -o dist/$npm_config_file.html --allow-local-files --html --theme-set ./themes"
+    "makehtml": "npx marp slides/$npm_config_file -o dist/$npm_config_file.html --allow-local-files --html --theme-set ./themes",
+    "makeimg": "npx marp slides/$npm_config_file --allow-local-files --html --theme-set ./themes --images png"
   },
   "repository": {
     "type": "git",
